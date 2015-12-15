@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>camel-guice-activemq</artifactId>
+        <groupId>iblutha.demo.eip</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>littleShop</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>littleShop-api</module>
+        <module>littleShop-rest</module>
+        <module>littleshop-backend</module>
+    </modules>
+    <properties>
+        <littleShop-api.version>0.0.1-SNAPSHOT</littleShop-api.version>
+        <littleShop-rest.version>0.0.1-SNAPSHOT</littleShop-rest.version>
+        <littleShop-backend.version>0.0.1-SNAPSHOT</littleShop-backend.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>iblutha.demo.eip</groupId>
+            <artifactId>littleShop-api</artifactId>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>iblutha.demo.eip</groupId>
+                <artifactId>littleShop-api</artifactId>
+                <version>${littleShop-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>iblutha.demo.eip</groupId>
+                <artifactId>littleshop-backend</artifactId>
+                <version>${littleShop-backend.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>iblutha.demo.eip</groupId>
+                <artifactId>littleShop-rest</artifactId>
+                <version>${littleShop-rest.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>
